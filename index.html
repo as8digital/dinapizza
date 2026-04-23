@@ -418,10 +418,12 @@ function toggleVideo(btn) {
   var video = card.querySelector('video');
   if (video.paused) {
     video.play();
-    btn.style.opacity = '0';
+    btn.style.display = 'none';
+    video.controls = true;
   } else {
     video.pause();
-    btn.style.opacity = '1';
+    btn.style.display = 'flex';
+    video.controls = false;
   }
 }
 </script>
