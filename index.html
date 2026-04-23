@@ -37,18 +37,18 @@ nav{position:sticky;top:0;z-index:100;background:var(--darker);border-bottom:0.5
 .carousel-slide:nth-child(2){background-image:url('fotos/hero-2.jpg');animation-delay:5s}
 .carousel-slide:nth-child(3){background-image:url('fotos/hero-3.jpg');animation-delay:10s}
 @keyframes carouselFade{0%{opacity:0}5%{opacity:1}28%{opacity:1}33%{opacity:0}100%{opacity:0}}
-.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(0,0,0,0.82) 0%,rgba(0,0,0,0.5) 60%,rgba(0,0,0,0.3) 100%)}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.65) 60%,rgba(0,0,0,0.4) 100%)}
 .hero-content{position:relative;z-index:2;padding:60px 32px;max-width:640px;width:100%}
 .badge-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(217,43,26,0.15);border:0.5px solid rgba(217,43,26,0.4);padding:6px 14px;border-radius:999px;font-size:10px;font-weight:600;color:var(--orange);letter-spacing:2px;margin-bottom:22px}
 .badge-pill .dot{width:6px;height:6px;background:var(--red);border-radius:50%;flex-shrink:0}
 h1{font-size:clamp(36px,6vw,62px);font-weight:900;line-height:1.02;letter-spacing:-1px;margin-bottom:8px}
 h1 .accent{color:var(--yellow)}
-.hero-sub{font-size:clamp(13px,2vw,15px);line-height:1.75;color:rgba(255,255,255,0.65);margin:18px 0 28px;max-width:480px}
+.hero-sub{font-size:clamp(13px,2vw,15px);line-height:1.75;color:rgba(255,255,255,0.9);margin:18px 0 28px;max-width:480px;text-shadow:0 1px 4px rgba(0,0,0,0.7)}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
 .hero-stats{display:flex;gap:24px;margin-top:40px;padding-top:28px;border-top:0.5px solid rgba(255,255,255,0.1);flex-wrap:wrap}
 .hero-stat-divider{width:0.5px;background:rgba(255,255,255,0.12)}
-.stat-num{font-size:clamp(22px,4vw,30px);font-weight:900;color:var(--yellow);line-height:1}
-.stat-label{font-size:9px;font-weight:600;color:rgba(255,255,255,0.4);letter-spacing:1px;margin-top:3px}
+.stat-num{font-size:clamp(22px,4vw,30px);font-weight:900;color:var(--yellow);line-height:1;text-shadow:0 1px 4px rgba(0,0,0,0.8)}
+.stat-label{font-size:9px;font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:1px;margin-top:3px;text-shadow:0 1px 4px rgba(0,0,0,0.8)}
 .carousel-dots{position:absolute;bottom:28px;left:32px;display:flex;gap:8px;z-index:10}
 .carousel-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.3);animation:dotActive 15s infinite}
 .carousel-dot:nth-child(1){animation-delay:0s}
@@ -70,8 +70,8 @@ section{padding:60px 32px}
 .section-sub{font-size:14px;color:rgba(255,255,255,0.45);line-height:1.7;max-width:480px}
 .section-header{text-align:center;margin-bottom:40px}
 .section-header .section-sub{margin:0 auto}
-.buffet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.buffet-card{border-radius:10px;overflow:hidden;position:relative;height:180px;background:var(--card2);display:flex;align-items:flex-end;cursor:pointer;transition:transform .2s}
+.buffet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.buffet-card{border-radius:10px;overflow:hidden;position:relative;height:240px;background:var(--card2);display:flex;align-items:flex-end;cursor:pointer;transition:transform .2s}
 .buffet-card:hover{transform:scale(1.02)}
 .buffet-card-bg{position:absolute;inset:0;background-size:cover;background-position:center}
 .buffet-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.88) 38%,rgba(0,0,0,.1) 100%)}
@@ -118,7 +118,7 @@ section{padding:60px 32px}
 .units-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:28px;flex-wrap:wrap;gap:12px}
 .units-count{font-size:12px;color:rgba(255,255,255,.3);font-weight:500}
 .units-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.unit-card{border-radius:10px;overflow:hidden;position:relative;height:180px;background:var(--card2);display:flex;align-items:flex-end;cursor:pointer;transition:transform .2s}
+.unit-card{border-radius:10px;overflow:hidden;position:relative;height:220px;background:var(--card2);display:flex;align-items:flex-end;cursor:pointer;transition:transform .2s}
 .unit-card:hover{transform:scale(1.03)}
 .unit-card-bg{position:absolute;inset:0;background-size:cover;background-position:center}
 .unit-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.92) 44%,rgba(0,0,0,.1) 100%)}
@@ -169,17 +169,18 @@ footer{background:var(--darkest);padding:40px 32px 28px;border-top:0.5px solid r
   .hero-stats{gap:16px}
   .hero-stat-divider{display:none}
   .carousel-dots{left:20px;bottom:20px}
-  .price-bar{grid-template-columns:1fr 1fr;gap:14px;padding:20px}
-  .price-bar>div:first-child{grid-column:1/-1}
-  .price-col{border-left:none;border-top:0.5px solid rgba(255,255,255,0.15);padding-left:0;padding-top:12px}
+  .price-bar{grid-template-columns:1fr;gap:14px;padding:20px}
+  .price-bar>div:first-child{border-bottom:0.5px solid rgba(255,255,255,0.2);padding-bottom:14px}
+  .price-cols-mobile{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .price-col{border-left:0.5px solid rgba(255,255,255,0.2);border-top:none;padding-left:14px;padding-top:0}
   section{padding:48px 20px}
   .buffet-grid{grid-template-columns:1fr 1fr}
-  .buffet-card{height:160px}
+  .buffet-card{height:220px}
   .gallery-grid{grid-template-columns:1fr 1fr}
   .gallery-card{height:160px}
   .dep-grid{grid-template-columns:1fr}
   .units-grid{grid-template-columns:1fr 1fr}
-  .unit-card{height:160px}
+  .unit-card{height:200px}
   .footer-grid{grid-template-columns:1fr 1fr;gap:24px}
   .footer-grid>div:first-child{grid-column:1/-1}
   .cta-section{padding:48px 20px}
@@ -199,7 +200,7 @@ footer{background:var(--darkest);padding:40px 32px 28px;border-top:0.5px solid r
 <nav>
   <div class="logo-wrap">
     <div class="logo-circle"><div class="logo-circle-mid"><div class="logo-circle-inner">DINA<br/>PIZZA</div></div></div>
-    <div><div class="logo-text-main">Buffet Dina Pizza</div><div class="logo-text-sub">BUFFET COMPLETO</div></div>
+    <div><img src="fotos/logo.png" alt="Buffet Dina Pizza" style="height:36px;width:auto;object-fit:contain;"></div>
   </div>
   <nav class="nav-links">
     <a href="#buffet">O Buffet</a>
@@ -258,9 +259,11 @@ footer{background:var(--darkest);padding:40px 32px 28px;border-top:0.5px solid r
     <div class="price-bar-title">Mesmo preço em todas as unidades</div>
     <div class="price-bar-kids">Crianças até 6 anos não pagam · 7–10 anos meia</div>
   </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;">
   <div class="price-col"><div class="price-day">SEG A QUI</div><div class="price-val">R$57,30</div></div>
   <div class="price-col"><div class="price-day">SEX E DOM</div><div class="price-val">R$69,90</div></div>
   <div class="price-col"><div class="price-day">SÁBADO</div><div class="price-val">R$79,90</div></div>
+  </div>
 </div>
 
 <section id="buffet" style="background:var(--dark);">
@@ -277,12 +280,11 @@ footer{background:var(--darkest);padding:40px 32px 28px;border-top:0.5px solid r
     <div class="buffet-card"><div class="buffet-card-bg" style="background-image:url('fotos/buffet-saladas.jpg')"></div><div class="buffet-card-overlay"></div><div class="buffet-card-info"><div class="buffet-card-name">Saladas e sobremesas</div><div class="buffet-card-desc">Frescas e variadas</div></div></div>
     <div class="buffet-card yellow"><div class="buffet-card-bg" style="background-image:url('fotos/buffet-refri.jpg');background-color:var(--yellow)"></div><div class="buffet-card-overlay"></div><div class="buffet-card-info"><div class="buffet-card-name">Refri à vontade</div><div class="buffet-card-desc" style="color:rgba(255,255,255,.7)">Máquinas self-service</div></div></div>
   </div>
-  <div class="buffet-extra">
-    <div class="buffet-extra-left">
-      <div class="buffet-extra-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#D92B1A" stroke-width="1.5"/><path d="M8 14 Q10 17 12 17 Q14 17 16 14" stroke="#D92B1A" stroke-width="1.5" fill="none"/></svg></div>
-      <div><div class="buffet-extra-title">Sorvete de massa com diversos sabores</div><div class="buffet-extra-sub">Incluso no valor do buffet</div></div>
+  <div class="buffet-card" style="height:240px;margin-top:10px;">
+    <div class="buffet-card-overlay"></div><div class="buffet-card-bg" style="background-image:url('fotos/buffet-sorvete.jpg');"></div><div class="buffet-card-info" style="position:relative;z-index:2;width:100%;">
+      
+      <div class="buffet-card-name">Sorvete de massa</div><div class="buffet-card-desc">Diversos sabores · incluso no buffet</div>
     </div>
-    <span class="tag-incluso">INCLUSO</span>
   </div>
 </section>
 
@@ -339,6 +341,42 @@ footer{background:var(--darkest);padding:40px 32px 28px;border-top:0.5px solid r
     <div class="unit-card"><div class="unit-card-bg" style="background-image:url('fotos/unidade-campo-largo.jpg')"></div><div class="unit-overlay"></div><div class="unit-info"><div class="unit-name">Campo Largo</div><div class="unit-addr">Av. Ayrton Senna da Silva, 2506</div><div class="unit-link">Ver unidade →</div></div></div>
   </div>
 </section>
+
+
+<section style="background:var(--darker);padding:64px 32px 48px;">
+  <div style="text-align:center;margin-bottom:40px;">
+    <div class="section-badge"><span class="dot"></span>NOS BASTIDORES</div>
+    <h2 class="section-title">Veja o <span class="accent">buffet ao vivo</span></h2>
+    <p class="section-sub" style="margin:0 auto;">Reels reais do dia a dia nas nossas unidades</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+    <div style="border-radius:12px;overflow:hidden;background:#000;border:0.5px solid rgba(255,255,255,0.08);">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DGvXw-Muxzo/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;margin:0;max-width:100%;min-width:0;padding:0;width:100%;"></blockquote>
+    </div>
+    <div style="border-radius:12px;overflow:hidden;background:#000;border:0.5px solid rgba(255,255,255,0.08);">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DWZ3h6fA5H4/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;margin:0;max-width:100%;min-width:0;padding:0;width:100%;"></blockquote>
+    </div>
+    <div style="border-radius:12px;overflow:hidden;background:#000;border:0.5px solid rgba(255,255,255,0.08);">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DCFoLzivo-e/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;margin:0;max-width:100%;min-width:0;padding:0;width:100%;"></blockquote>
+    </div>
+    <div style="border-radius:12px;overflow:hidden;background:#000;border:0.5px solid rgba(255,255,255,0.08);">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DHbLMhJuPv6/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;margin:0;max-width:100%;min-width:0;padding:0;width:100%;"></blockquote>
+    </div>
+    <div style="border-radius:12px;overflow:hidden;background:#000;border:0.5px solid rgba(255,255,255,0.08);">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DOMsXX0jSR0/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;margin:0;max-width:100%;min-width:0;padding:0;width:100%;"></blockquote>
+    </div>
+    <div style="border-radius:12px;overflow:hidden;background:#000;border:0.5px solid rgba(255,255,255,0.08);">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DTkgDmjjjMl/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;margin:0;max-width:100%;min-width:0;padding:0;width:100%;"></blockquote>
+    </div>
+  </div>
+  <div style="margin-top:20px;text-align:center;">
+    <a href="https://www.instagram.com/dinapizzaoficial/" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;padding:12px 28px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;font-family:'Poppins',sans-serif;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="white" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="white"/></svg>
+      Ver mais no Instagram
+    </a>
+  </div>
+</section>
+<script async src="//www.instagram.com/embed.js"></script>
 
 <div class="cta-section" id="reservar">
   <div class="cta-circle-1"></div><div class="cta-circle-2"></div>
